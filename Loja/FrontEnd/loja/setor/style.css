@@ -1,0 +1,20 @@
+table{
+    border: 2px solid #000000;
+}
+
+th,td{
+    border: 2px solid #000000;
+}
+
+
+
+.model{
+    visibility: hidden;
+    display: none;
+}
+
+main{ 
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
