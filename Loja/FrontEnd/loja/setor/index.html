@@ -9,29 +9,26 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onLoad = "carregar()">
     <header>Bonetto</header>
     <main>
-        <p>Insira o ID do setor</p>
-        <input id="inpSetor" type="text">
-        <button onclick="enviar()">enviar</button>
+        <div class="cadastro">
+            <p>Nome</p>
+            <input id="inpNome" type="text">
+            <p>Comissão</p>
+            <input id="inpComis" type="text"><br/><br/>
+            <button onclick="Create()">Cadastrar</button>
+        </div>
         <div>
 
-            <div>
-                <p>Setor</p>
-                <p>Comissão</p>
-                <p>Vendedor</p>
-                <p>Produto</p>
-                <p>Valor</p>
-            </div>
+            
 
             <div class="lista">
                 <div class="item-lista model">
+                    <p id="Id"></p>
                     <p id="Setor"></p>
                     <p id="Comissao"></p>
                     <p id="Vendedor"></p>
-                    <p id="Produto"></p>
-                    <p id="Valor"></p>
                 </div>
             </div>
         </div>

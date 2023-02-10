@@ -13,7 +13,24 @@ const create = async (req, res) => {
 }
 
 const read = async (req, res) => {
-    let setores = await prisma.setor.findMany();
+    let setores = await prisma.setor.findMany({
+        select: {
+            id: true,
+            nome: true,
+            comissao: true,
+            vendedor: {
+                select: {
+                    nome:true
+                }
+            },
+            produtos: {
+                select: {
+                    nome: true,
+                    valor: true
+                }
+            }
+        }
+    });
 
     res.status(200).json(setores).end();
 }
