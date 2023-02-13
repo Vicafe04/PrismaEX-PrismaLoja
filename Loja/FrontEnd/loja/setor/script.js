@@ -11,8 +11,6 @@ function carregar() {
             // console.log(setores)
 
             setores.forEach(setor => {
-                if(setor.vendedor[0].nome != null){
-                    console.log(setor)
                 let item = itemlista.cloneNode(true);
                 item.classList.remove("model");
                 item.querySelector("#Id").innerHTML = "Id: " + setor.id;
@@ -22,7 +20,6 @@ function carregar() {
                 let div = document.createElement("div")
                 div.className = "prods"
                 setor.produtos.forEach(prod => {
-                    console.log(prod)
                     let divUnit = document.createElement("div")
                     divUnit.className = "prodsUnit"
                     let p = document.createElement("p")
@@ -38,13 +35,12 @@ function carregar() {
 
                 item.appendChild(div)
                 lista.appendChild(item);
-                }
+                 
             })
         })
 }
 
 function Create() {
-    console.log(inpNome)
     var dados = {
         nome: inpNome.value,
         comissao: Number(inpComis.value)
@@ -65,11 +61,9 @@ function Create() {
     
     console.log(inpNome)
         .then(res => {
-            console.log(res)
             return res.json()
         })
         .then(data => {
-            console.log(data)
             return data
         })
     

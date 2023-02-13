@@ -1,0 +1,55 @@
+table{
+    border: 2px solid #000000;
+}
+
+th,td{
+    border: 2px solid #000000;
+}
+
+
+
+.model{
+    visibility: hidden;
+    display: none;
+}
+
+main{ 
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+#Id,
+#Setor,
+#Comissao,
+#Vendedor
+ {
+    font-weight: bold;
+}
+
+.prods{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.prodsUnit{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    height: 80px;
+}
+
+.prod{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
